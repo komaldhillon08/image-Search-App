@@ -20,6 +20,7 @@ async function searchImages() {
         searchResults.innerHTML = "";
 
     }
+    
     results.map((result) => {
 
         const imageWrapper = document.createElement("div")
