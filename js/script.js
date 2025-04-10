@@ -20,7 +20,7 @@ async function searchImages() {
         searchResults.innerHTML = "";
 
     }
-    
+
     results.map((result) => {
 
         const imageWrapper = document.createElement("div")
@@ -35,9 +35,27 @@ async function searchImages() {
         imageLink.target = "_blank"
         imageLink.textContent = result.alt_description;
 
+     
+
+
+
+    
+/*         // 🔽 New: Create a download button
+        const downloadBtn = document.createElement("a");
+        downloadBtn.href = result.urls.full; // Use full image for better quality
+        downloadBtn.download = "image.jpg";  // You can customize this name
+        downloadBtn.textContent = "Download";
+        downloadBtn.classList.add("download-btn"); // Optional: add class for styling
+        downloadBtn.style.display = "block";
+        downloadBtn.style.marginTop = "5px"; */
+
+        
         imageWrapper.appendChild(image)
         imageWrapper.appendChild(imageLink)
+        // imageWrapper.appendChild(downloadBtn);
         searchResults.appendChild(imageWrapper)
+
+
     })
     page++;
     if (page > 1) {
